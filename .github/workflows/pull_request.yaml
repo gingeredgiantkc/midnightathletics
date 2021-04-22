@@ -15,7 +15,7 @@ jobs:
         echo "BUILD_ID=${BUILD_BRANCH}-$(date +%Y%m%d%H%M%S)-${GITHUB_SHA}" >> $GITHUB_ENV
     - name: Set APP_IMAGE
       run: |
-        echo "APP_IMAGE=coreyburmeister/midnightathletics:${BUILD_ID}" >> $GITHUB_ENV
+        echo "APP_IMAGE=gingeredgiantkc/midnightathletics:${BUILD_ID}" >> $GITHUB_ENV
     - name: Build
       run: |
         docker build -t registry.digitalocean.com/${APP_IMAGE} app
